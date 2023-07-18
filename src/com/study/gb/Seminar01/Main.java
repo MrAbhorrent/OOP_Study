@@ -17,11 +17,13 @@ public class Main {
         HotDrink cup3 = new HotDrink("Drink3", 25, 2, 45);
         HotDrink cup4 = new HotDrink("Drink1", 14, 2, 30);
 
-        List<HotDrink> hotProduct = new ArrayList<>();
+        List<Product> hotProduct = new ArrayList<>();
         hotProduct.add(cup1); hotProduct.add(cup2); hotProduct.add(cup3); hotProduct.add(cup4);
-        
+        System.out.println(cup1);
+
+
         HotDrinkVendingMachine hotDrinkVendingMachine = new HotDrinkVendingMachine();
-        hotDrinkVendingMachine.initVendingMachine(hotProduct);
+        hotDrinkVendingMachine.initVendingMachine();
         String searchProduct = "drink1";
         String searchStr = "";
         if (hotDrinkVendingMachine.getProduct(searchProduct) != null) {
