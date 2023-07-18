@@ -2,21 +2,21 @@ package com.study.gb.Seminar01;
 
 import java.util.List;
 
-public class HotCoupleOfWaterVendingMachine implements VendingMachine {
-    List<HotCoupleOfWater> products;
+public class HotDrinkVendingMachine implements VendingMachine {
+    List<HotDrink> products;
 
     @Override
     public void initVendingMachine() {
 
     }
 
-    public void initVendingMachine(List<HotCoupleOfWater> products) {
+    public void initVendingMachine(List<HotDrink> products) {
         this.products = products;
     }
 
     @Override
     public Product getProduct(String name) throws IllegalStateException {
-        for(HotCoupleOfWater product: products){
+        for(HotDrink product: products){
             if(product instanceof BottleOfWater){
                 if (product.getName().equalsIgnoreCase(name)) {
                     return product;
@@ -30,7 +30,7 @@ public class HotCoupleOfWaterVendingMachine implements VendingMachine {
 
     public Product getProduct(String name, int volume, double temperature){
 
-        for(HotCoupleOfWater product: products){
+        for(HotDrink product: products){
             if(product instanceof BottleOfWater){
                 if(product.getName().equalsIgnoreCase(name)
                         && product.getVolume() == volume

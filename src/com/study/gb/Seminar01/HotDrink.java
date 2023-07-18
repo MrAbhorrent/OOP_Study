@@ -2,11 +2,11 @@ package com.study.gb.Seminar01;
 
 import java.util.Objects;
 
-public class HotCoupleOfWater extends BottleOfWater {
+public class HotDrink extends BottleOfWater {
 
     private double temperature;
 
-    public HotCoupleOfWater(String name, double cost, int volume, double temperature){
+    public HotDrink(String name, double cost, int volume, double temperature){
         super(name, cost, volume);
         this.temperature = temperature;
     }
@@ -34,7 +34,7 @@ public class HotCoupleOfWater extends BottleOfWater {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        HotCoupleOfWater that = (HotCoupleOfWater) o;
+        HotDrink that = (HotDrink) o;
         return super.getName().equalsIgnoreCase(that.getName())
                 && super.getCost() == that.getCost()
                 && super.getVolume() == that.getVolume()

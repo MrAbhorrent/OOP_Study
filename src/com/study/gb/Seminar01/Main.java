@@ -1,6 +1,7 @@
 package com.study.gb.Seminar01;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -11,21 +12,27 @@ public class Main {
 //    4. Всё вышеуказанное создать согласно принципам ООП, пройденным на семинаре
 
     public static void main(String[] args) {
-        HotCoupleOfWater cup1 = new HotCoupleOfWater("Drink1", 10, 1, 45);
-        HotCoupleOfWater cup2 = new HotCoupleOfWater("Drink2", 15, 1, 60);
-        HotCoupleOfWater cup3 = new HotCoupleOfWater("Drink3", 25, 2, 45);
-        HotCoupleOfWater cup4 = new HotCoupleOfWater("Drink1", 14, 2, 30);
+        HotDrink cup1 = new HotDrink("Drink1", 10, 1, 45);
+        HotDrink cup2 = new HotDrink("Drink2", 15, 1, 60);
+        HotDrink cup3 = new HotDrink("Drink3", 25, 2, 45);
+        HotDrink cup4 = new HotDrink("Drink1", 14, 2, 30);
 
-        List<HotCoupleOfWater> hotProduct = new ArrayList<>();
+        List<HotDrink> hotProduct = new ArrayList<>();
         hotProduct.add(cup1); hotProduct.add(cup2); hotProduct.add(cup3); hotProduct.add(cup4);
         
-        HotCoupleOfWaterVendingMachine hotCoupleOfWaterVendingMachine = new HotCoupleOfWaterVendingMachine();
-        hotCoupleOfWaterVendingMachine.initVendingMachine(hotProduct);
+        HotDrinkVendingMachine hotDrinkVendingMachine = new HotDrinkVendingMachine();
+        hotDrinkVendingMachine.initVendingMachine(hotProduct);
         String searchProduct = "drink1";
         String searchStr = "";
-        if (hotCoupleOfWaterVendingMachine.getProduct(searchProduct) != null) {
-            searchStr = hotCoupleOfWaterVendingMachine.getProduct(searchProduct).toString();
+        if (hotDrinkVendingMachine.getProduct(searchProduct) != null) {
+            searchStr = hotDrinkVendingMachine.getProduct(searchProduct).toString();
         }
         System.out.printf("В автомате ищем %s :\n%s%n", searchProduct, searchStr);
+
+        String[] searchParams = {"drink1", "2", "30"};
+        if (hotDrinkVendingMachine.getProduct(searchParams[0], Integer.parseInt(searchParams[1]), Integer.parseInt(searchParams[2])) != null) {
+            searchStr = hotDrinkVendingMachine.getProduct(searchProduct, 2, 30).toString();
+        }
+        System.out.printf("В автомате ищем %s :\n%s%n", Arrays.toString(searchParams), searchStr);
     }
 }

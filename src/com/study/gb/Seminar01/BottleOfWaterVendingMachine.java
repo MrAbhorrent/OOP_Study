@@ -7,6 +7,7 @@ public class BottleOfWaterVendingMachine implements VendingMachine {
     private List<BottleOfWater> products;
 
     public void initVendingMachine() {
+        initVendingMachine(products);
     }
 
     public void initVendingMachine(List<BottleOfWater> products) {
