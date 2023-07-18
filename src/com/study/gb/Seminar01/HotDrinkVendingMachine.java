@@ -17,7 +17,7 @@ public class HotDrinkVendingMachine implements VendingMachine {
     @Override
     public Product getProduct(String name) throws IllegalStateException {
         for(HotDrink product: products){
-            if(product instanceof BottleOfWater){
+            if(product instanceof HotDrink){
                 if (product.getName().equalsIgnoreCase(name)) {
                     return product;
                 }
