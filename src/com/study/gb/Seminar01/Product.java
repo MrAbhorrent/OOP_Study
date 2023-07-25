@@ -5,8 +5,8 @@ public abstract class Product {
     private double cost;
 
     public Product(String name, double cost) {
-        this.name = name;
-        this.cost = cost;
+        setName(name);
+        setCost(cost);
     }
 
     public String getName() {

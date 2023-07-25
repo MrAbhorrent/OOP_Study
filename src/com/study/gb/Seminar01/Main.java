@@ -29,7 +29,7 @@ public class Main {
         if (hotDrinkVendingMachine.getProduct(searchProduct) != null) {
             searchStr = hotDrinkVendingMachine.getProduct(searchProduct).toString();
         }
-        System.out.printf("В автомате ищем %s :\n%s%n", searchProduct, searchStr);
+        System.out.printf("В автомате ищем продукт - %s :\n%s%n", searchProduct, searchStr);
 
         String[] searchParams = {"drink1", "2", "30"};
         if (hotDrinkVendingMachine.getProduct(searchParams[0], Integer.parseInt(searchParams[1]), Integer.parseInt(searchParams[2])) != null) {
