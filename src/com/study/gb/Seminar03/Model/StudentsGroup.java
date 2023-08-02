@@ -1,4 +1,6 @@
-package com.study.gb.Seminar03;
+package com.study.gb.Seminar03.Model;
+
+import com.study.gb.Seminar03.StudentsGroupIterator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ public class StudentsGroup implements Iterable<Student> {
     private List<Student> students;
 
     public StudentsGroup() {
-        students = new ArrayList<>();
+        this(new ArrayList<>());
     }
 
     public StudentsGroup(List<Student> students) {
@@ -20,7 +22,7 @@ public class StudentsGroup implements Iterable<Student> {
         }
     }
 
-    public List<Student> getStudents() {
+    public List<Student> getStudentsList() {
         return students;
     }
 
