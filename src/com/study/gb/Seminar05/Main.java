@@ -1,10 +1,10 @@
-package com.study.gb.Seminar04;
+package com.study.gb.Seminar05;
 
-import com.study.gb.Seminar04.data.Student;
-import com.study.gb.Seminar04.data.StudentGroup;
-import com.study.gb.Seminar04.data.Teacher;
-import com.study.gb.Seminar04.data.User;
-import com.study.gb.Seminar04.view.StudentView;
+import com.study.gb.Seminar05.data.Student;
+import com.study.gb.Seminar05.data.StudentGroup;
+import com.study.gb.Seminar05.data.Teacher;
+import com.study.gb.Seminar05.data.User;
+import com.study.gb.Seminar05.view.StudentView;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -12,9 +12,11 @@ import java.util.List;
 
 public class Main {
 
-//    — Создать класс УчительСервис и реализовать аналогично проделанному на семинаре;
-//    — Создать класс УчительВью и реализовать аналогично проделанному на семинаре;
-//    — Создать класс УчительКонтроллер и реализовать возможность создания, редактирования конкретного учителя и отображения списка учителей, имеющихся в системе.
+//      — Создать класс УчебнаяГруппа, содержащий в себе поля Преподаватель и список Студентов;
+//      — Создать класс УчебнаяГруппаСервис, в котором реализована функция (входные параметры - (Teacher, List<Strudent>)) формирования из Студентов и Преподавателя УчебнойГруппы и возвращения его;
+//      — Создать метод в Контроллере, в котором агрегируются функции получения списка студентов (их id) и преподавателя (его id) и формирования учебной группы, путём вызова метода из сервиса;
+//      — Всё вышеуказанное создать согласно принципам ООП, пройдённым на семинаре.
+
     public static void main(String[] args) {
         User student1 = new Student("Иванов", "Иван", "Иванович", LocalDate.now(), 1213L);
         User student2 = new User("Петров", "Иван", "Иванович", LocalDate.now());
