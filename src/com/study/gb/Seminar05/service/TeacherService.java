@@ -36,4 +36,16 @@ public class TeacherService {
         edTeacher.setPatronymic(teacher.getPatronymic());
         edTeacher.setDateOfBirth(teacher.getDateOfBirth());
     }
+
+    public Teacher getTeacher(int idTeacher) {
+        if (teachers != null) {
+            for (Teacher teacher: teachers) {
+                if (teacher.getTeacherId() == idTeacher) {
+                    return teacher;
+                }
+            }
+
+        }
+        return null;
+    }
 }
