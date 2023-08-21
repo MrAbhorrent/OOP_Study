@@ -33,9 +33,6 @@ public class ComplexNumber {
         this.im = im;
     }
 
-
-
-
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("{");
