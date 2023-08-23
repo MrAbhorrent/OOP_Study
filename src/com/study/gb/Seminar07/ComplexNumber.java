@@ -5,8 +5,8 @@ public class ComplexNumber {
     private float im;
 
     public ComplexNumber(float re, float im) {
-        this.re = re;
-        this.im = im;
+        setRe(re);
+        setIm(im);
     }
 
     public ComplexNumber(float reValue) {
@@ -41,9 +41,9 @@ public class ComplexNumber {
         } else stringBuilder.append("0");
         if (this.im != 0) {
             if (this.im < 0) {
-                stringBuilder.append(" + ");
-            } else {
                 stringBuilder.append(" - ");
+            } else {
+                stringBuilder.append(" + ");
             }
             stringBuilder
                     .append(this.im)

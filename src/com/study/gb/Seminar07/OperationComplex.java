@@ -17,9 +17,9 @@ public class OperationComplex implements ICalculation<ComplexNumber> {
     }
 
     @Override
-    public ComplexNumber multiply(ComplexNumber arg1, ComplexNumber arg2) {
-        float multiplyRe = arg1.getRe() * arg2.getRe() - arg1.getIm() * arg2.getIm();
-        float multiplyIm = arg1.getRe() * arg2.getIm() + arg1.getIm() * arg2.getRe();
+    public ComplexNumber multiply(ComplexNumber complexNumber1, ComplexNumber complexNumber2) {
+        float multiplyRe = complexNumber1.getRe() * complexNumber2.getRe() - complexNumber1.getIm() * complexNumber2.getIm();
+        float multiplyIm = complexNumber1.getRe() * complexNumber2.getIm() + complexNumber1.getIm() * complexNumber2.getRe();
         return new ComplexNumber(multiplyRe, multiplyIm);
     }
 
